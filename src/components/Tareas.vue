@@ -7,7 +7,7 @@
             <button class="btnAdd" @click="addNewTask">Agregar</button>
             <h1 class="taskListTitle">Lista</h1>
             <ol>
-                <li v-for="(Task, index) in Tasks" :key="index">{{Task}}<button class="btnDelete" @click="deleteTask(index)">Eliminar</button></li>
+                <li v-for="(Task, index) in Tasks" :key="index">{{Task}}<button class="btnDelete" >Eliminar</button></li>
             </ol>
         </div>
     <TareaDel></TareaDel>
@@ -29,7 +29,7 @@ export default {
         addNewTask() {
             this.Tasks.push(this.newTask)
             this.newTask = ""
-        }
+        },
     },
 }
 </script>
