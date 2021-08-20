@@ -1,22 +1,27 @@
 <template>
-    <div></div>
+  <div>
+    <h1 class="taskListTitle">Lista</h1>
+    <ol>
+      <li v-for="(Task, index) in Tasks" :key="index">
+        {{ Task }}<button class="btnDelete" @click="delTask(Tasks)">Eliminar</button>
+      </li>
+    </ol>
+  </div>
 </template>
 
 <script>
 export default {
-    props: {
-        Tasks : Array,
-        
+  name: "TaskDel",
+  props: {
+    Tasks: {
+      type: Array,
+      required: true,
     },
-    data: () => ({
-        newTask: "",
-        Tasks: ["Despertar"],
-    }),
-    methods: {
-        erase() {
-            this.Tasks.push(this.newTask)
-            this.newTask = ""
-        },
-    },
-}
+  },
+  methods :{
+  delTask(Tasks) {
+    this.$emit("deleteTask", Tasks)
+  },
+  }
+};
 </script>
