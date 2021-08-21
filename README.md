@@ -1,5 +1,7 @@
 # vue_props
 
+// Fernando Vargas
+
 ## Project setup
 ```
 npm install
