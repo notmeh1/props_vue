@@ -30,8 +30,8 @@ export default {
       this.Tasks.push(this.newTask);
       this.newTask = "";
     },
-    deleteTask(index) {
-        this.Tasks.splice(index, 1)
+    deleteTask(Tasks) {
+        this.Tasks.splice(Tasks, 1)
     }
   },
 };
@@ -78,6 +78,9 @@ export default {
 .taskListTitle {
   text-align: center;
   margin-bottom: 0.3em;
+}
+.taskListNT {
+    text-align: center;
 }
 .btnDelete {
   padding: 5px 7px;

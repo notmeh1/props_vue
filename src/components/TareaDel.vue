@@ -3,7 +3,7 @@
     <h1 class="taskListTitle">Lista</h1>
     <ol>
       <li v-for="(Task, index) in Tasks" :key="index">
-        {{ Task }}<button class="btnDelete" @click="delTask(Tasks)">Eliminar</button>
+        {{ Task }}<button class="btnDelete" @click="delTask(index)">Eliminar</button>
       </li>
     </ol>
   </div>
